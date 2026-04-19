@@ -45,6 +45,7 @@ header {
     opacity: 1;
     transform: scale(1);
   }
+}   /* ← ЭТА СКОБКА БЫЛА ПРОПУЩЕНА */
 /* НЕОНОВОЕ СВЕЧЕНИЕ */
 .logo-img:hover {
   animation: glow 1s infinite alternate;
