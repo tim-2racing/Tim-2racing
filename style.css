@@ -27,12 +27,10 @@ header {
   );
   animation: moveLines 6s linear infinite;
 }
-
 @keyframes moveLines {
   from { transform: translateX(0); }
   to { transform: translateX(200px); }
 }
-
 /* ЛОГО */
 .logo-img {
   width: 220px;
@@ -40,7 +38,6 @@ header {
   animation: logoIn 1.5s ease forwards;
   filter: drop-shadow(0 0 10px #1e6bff);
 }
-
 @keyframes logoIn {
   0% {
     opacity: 0;
@@ -50,29 +47,23 @@ header {
     opacity: 1;
     transform: scale(1);
   }
-}
-
 /* НЕОНОВОЕ СВЕЧЕНИЕ */
 .logo-img:hover {
   animation: glow 1s infinite alternate;
 }
-
 @keyframes glow {
   from { filter: drop-shadow(0 0 10px #1e6bff); }
   to { filter: drop-shadow(0 0 25px #1e6bff); }
 }
-
 .logo-text {
   font-size: 42px;
   margin-top: 10px;
   text-shadow: 0 0 10px #1e6bff;
 }
-
 .subtitle {
   opacity: 0.8;
   margin-bottom: 25px;
 }
-
 /* КНОПКИ */
 button {
   margin: 5px;
@@ -83,31 +74,26 @@ button {
   cursor: pointer;
   transition: 0.3s;
 }
-
 button:hover {
   background: #1e6bff;
   color: black;
   box-shadow: 0 0 20px #1e6bff;
 }
-
 /* СЕКЦИИ */
 section {
   padding: 80px 20px;
   text-align: center;
 }
-
 /* ПОЯВЛЕНИЕ */
 .fade {
   opacity: 0;
   transform: translateY(50px);
   transition: 1s;
 }
-
 .fade.show {
   opacity: 1;
   transform: translateY(0);
 }
-
 footer {
   padding: 20px;
   text-align: center;
