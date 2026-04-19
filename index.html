@@ -1,28 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>TIM-2 RACING</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
 <header>
-  <div class="lines"></div>
+    <div class="lines"></div>
 
-  <img src="file:///mnt/data/IMG_7519.png" class="logo-img" />
+    <img src="file:///mnt/data/IMG_7519.png" class="logo-img" />
 
-  <h1 class="logo-text">TIM-2 RACING</h1>
-  <p class="subtitle">Driven to win</p>
+    <h1 class="logo-text">TIM-2 RACING</h1>
+    <p class="subtitle">Driven to win</p>
 
-  <nav>
-    <button onclick="scrollToSection('about')">О команде</button>
-    <button onclick="goPage('academy')">Академия</button>
-    <button onclick="scrollToSection('contact')">Контакты</button>
-  </nav>
+    <nav>
+        <button onclick="scrollToSection('about')">О команде</button>
+        <button onclick="goPage('academy')">Академия</button>
+        <button onclick="scrollToSection('contact')">Контакты</button>
+    </nav>
 </header>
 
 <section id="about" class="fade">
-  <h2>О команде</h2>
-  <p>Мы — TIM-2 Racing. Будущая гоночная команда и академия пилотов.</p>
+    <h2>О команде</h2>
+    <p>Мы — TIM-2 Racing. Будущая гоночная команда и академия пилотов.</p>
 </section>
 
 <section id="contact" class="fade">
-  <h2>Контакты</h2>
-  <p>TikTok: www.tiktok.com/@tim2racing.academy </p>
+    <h2>Контакты</h2>
+    <p>TikTok: www.tiktok.com/@tim2racing.academy</p>
 </section>
 
 <footer>
-  <p>© TIM-2 RACING</p>
+    <p>© TIM-2 RACING</p>
 </footer>
+
+<script>
+function scrollToSection(id) {
+    document.getElementById(id).scrollIntoView({ behavior: 'smooth' });
+}
+
+function goPage(page) {
+    alert('Страница "' + page + '" в разработке!');
+}
+
+// Появление секций при скролле
+const fades = document.querySelectorAll('.fade');
+window.addEventListener('scroll', () => {
+    fades.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 100) {
+            el.classList.add('show');
+        }
+    });
+});
+window.dispatchEvent(new Event('scroll'));
+</script>
+</body>
+</html>
