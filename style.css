@@ -5,13 +5,11 @@ body {
   color: white;
   overflow-x: hidden;
 }
-
 header {
   position: relative;
   text-align: center;
   padding: 100px 20px;
 }
-
 /* ДВИЖУЩИЕСЯ ЛИНИИ */
 .lines {
   position: absolute;
